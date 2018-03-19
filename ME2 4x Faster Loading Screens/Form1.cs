@@ -53,9 +53,9 @@ namespace ME2_4x_Faster_Loading_Screens
             string doneText = "Done!";
 
             convertButton.Text = "Converting";
-
+            int fps = fourTimesFasterRadioButton.Checked ? 60 : 30;
             Task.WhenAll(biks.Select(bik =>
-                Task.Run(() => EditBIK(bik))
+                Task.Run(() => EditBIK(bik, fps))
             )).Wait();
             convertButton.Text = doneText;
             convertButton.Enabled = false;
@@ -63,11 +63,11 @@ namespace ME2_4x_Faster_Loading_Screens
             textBoxLabel.Text = "Converted Files";
         }
 
-        static void EditBIK(string path)
+        static void EditBIK(string path, int fps)
         {
             FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Write);
             fs.Seek(28, SeekOrigin.Begin);
-            fs.Write(BitConverter.GetBytes(60), 0, 4);
+            fs.Write(BitConverter.GetBytes(fps), 0, 4);
             fs.Close();
         }
     }

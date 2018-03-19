@@ -34,6 +34,10 @@
             this.convertButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxLabel = new System.Windows.Forms.Label();
+            this.fourTimesFasterRadioButton = new System.Windows.Forms.RadioButton();
+            this.twoTimesFasterRadioButton = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +73,7 @@
             // 
             this.convertButton.Enabled = false;
             this.convertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.convertButton.Location = new System.Drawing.Point(143, 77);
+            this.convertButton.Location = new System.Drawing.Point(159, 87);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(216, 36);
             this.convertButton.TabIndex = 3;
@@ -82,37 +86,73 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(16, 150);
+            this.textBox1.Location = new System.Drawing.Point(16, 172);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(471, 205);
+            this.textBox1.Size = new System.Drawing.Size(471, 190);
             this.textBox1.TabIndex = 4;
             // 
             // textBoxLabel
             // 
             this.textBoxLabel.AutoSize = true;
             this.textBoxLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLabel.Location = new System.Drawing.Point(16, 126);
+            this.textBoxLabel.Location = new System.Drawing.Point(16, 152);
             this.textBoxLabel.Name = "textBoxLabel";
             this.textBoxLabel.Size = new System.Drawing.Size(104, 17);
             this.textBoxLabel.TabIndex = 5;
             this.textBoxLabel.Text = "Files To Convert:";
             // 
+            // fourTimesFasterRadioButton
+            // 
+            this.fourTimesFasterRadioButton.AutoSize = true;
+            this.fourTimesFasterRadioButton.Checked = true;
+            this.fourTimesFasterRadioButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourTimesFasterRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.fourTimesFasterRadioButton.Name = "fourTimesFasterRadioButton";
+            this.fourTimesFasterRadioButton.Size = new System.Drawing.Size(87, 25);
+            this.fourTimesFasterRadioButton.TabIndex = 6;
+            this.fourTimesFasterRadioButton.TabStop = true;
+            this.fourTimesFasterRadioButton.Text = "4x faster";
+            this.fourTimesFasterRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // twoTimesFasterRadioButton
+            // 
+            this.twoTimesFasterRadioButton.AutoSize = true;
+            this.twoTimesFasterRadioButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.twoTimesFasterRadioButton.Location = new System.Drawing.Point(3, 34);
+            this.twoTimesFasterRadioButton.Name = "twoTimesFasterRadioButton";
+            this.twoTimesFasterRadioButton.Size = new System.Drawing.Size(90, 25);
+            this.twoTimesFasterRadioButton.TabIndex = 7;
+            this.twoTimesFasterRadioButton.Text = "2x Faster";
+            this.twoTimesFasterRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.fourTimesFasterRadioButton);
+            this.panel1.Controls.Add(this.twoTimesFasterRadioButton);
+            this.panel1.Location = new System.Drawing.Point(24, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(97, 64);
+            this.panel1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 367);
-            this.Controls.Add(this.textBoxLabel);
+            this.ClientSize = new System.Drawing.Size(499, 374);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textBoxLabel);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.selectFolderButton);
             this.Controls.Add(this.folderLocationText);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "ME2 4x Faster Loading Screens";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,6 +166,9 @@
         private System.Windows.Forms.Button convertButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label textBoxLabel;
+        private System.Windows.Forms.RadioButton fourTimesFasterRadioButton;
+        private System.Windows.Forms.RadioButton twoTimesFasterRadioButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
