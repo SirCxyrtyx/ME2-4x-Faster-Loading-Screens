@@ -39,7 +39,8 @@ namespace ME2_4x_Faster_Loading_Screens
             {
                 gamePath = dlg.FileName;
                 folderLocationText.Text = gamePath;
-                biks = Directory.GetFiles(gamePath, "load_*.bik", SearchOption.AllDirectories);
+                biks = Directory.EnumerateFiles(gamePath, "load_*.bik", SearchOption.AllDirectories);
+                biks = biks.Where(bik => !(bik.EndsWith("load_f19.bik") || bik.EndsWith("load_f99.bik")));
                 textBox1.Text = biks.Aggregate((a, b) => a + "\r\n" + b);
                 textBoxLabel.Text = "Files To Convert:";
                 convertButton.Enabled = true;
